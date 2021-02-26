@@ -1,0 +1,41 @@
+:root {
+  --tborder-color: #0076c4;
+  --tborder-width: 3px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0px;
+  border: var(--tborder-width) solid var(--tborder-color);
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgb(241, 241, 241);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+thead td {
+  font-weight: 900;
+  height: 100px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+th,
+td {
+  border-style: solid;
+  border-width: 0 var(--tborder-width) var(--tborder-width) 0;
+  border-color: var(--tborder-color);
+}
+
+tfoot td {
+  border-bottom: none;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
+
+th,td {
+  padding: 15px;
+}
