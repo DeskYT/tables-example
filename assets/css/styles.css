@@ -1,0 +1,78 @@
+:root {
+  --tbody-color: rgba(255, 255, 255, 0.5);
+  --tborder-color: #008cc4;
+  --tborder-width: 3px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0px;
+  border: var(--tborder-width) solid var(--tborder-color);
+  border-radius: 15px;
+  overflow: hidden;
+
+  background: rgb(221, 221, 221);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+thead td {
+  color: white;
+  font-weight: 900;
+  height: 100px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+th,
+td {
+  border-style: solid;
+  border-width: 0 var(--tborder-width) var(--tborder-width) 0;
+  border-color: var(--tborder-color);
+}
+
+tfoot td {
+  border-bottom: none;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
+
+span {
+  font-size: 30px;
+}
+thead td:nth-child(1) {
+  background: rgba(0, 0, 105, 0.2);
+}
+thead td:nth-child(2) {
+  background: rgba(0, 0, 105, 0.4);
+}
+thead td:nth-child(3) {
+  background: rgba(0, 0, 105, 0.6);
+}
+thead td:nth-child(4) {
+  background: rgba(0, 0, 105, 0.8);
+}
+thead td:nth-child(5) {
+  background: rgba(0, 0, 105, 1);
+}
+
+td + td {
+  text-align: center;
+}
+
+td {
+  padding: 15px;
+}
+
+tbody td:nth-child(2n),
+tfoot td:nth-child(2n),
+tr:nth-child(2n) {
+  background: var(--tbody-color);
+}
+
+button {
+  padding: 10px 30px;
+  text-transform: uppercase;
+}
