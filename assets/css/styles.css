@@ -1,5 +1,8 @@
 :root {
-  --tbody-color: rgba(255, 255, 255, 0.5);
+  /*-tbody-color: rgba(255, 255, 255, 0.5);*/
+  --primary-table-color: #dbdbdb;
+  --primary-table-color-light-variant: #f3f3f3;
+  --primary-table-color-dark-variant: #e7e7e7;
   /* --tborder-color: #0076c4; */
   /* --tborder-width: 3px; */
 }
@@ -66,11 +69,24 @@ td {
   padding: 15px;
 }
 
-tbody td:nth-child(2n),
+/*tbody td:nth-child(2n),
 tfoot td:nth-child(2n),
 tr:nth-child(2n) {
   background: var(--tbody-color);
+}*/
+tbody > tr:nth-child(odd) > td:nth-child(odd){
+  background-color: var(--primary-table-color);
 }
+
+tbody > tr:nth-child(even) > td:nth-child(even){
+  background-color: var(--primary-table-color-light-variant);
+}
+
+tbody > tr:nth-child(odd) > td:nth-child(even),
+tbody > tr:nth-child(even) > td:nth-child(odd){
+  background-color: var(--primary-table-color-dark-variant);
+}
+
 
 button {
   padding: 10px 30px;
